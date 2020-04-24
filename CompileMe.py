@@ -36,7 +36,7 @@ class CompileMe():
         except IndexError as error:
                 self.langsupport()
                 return 
-        lang_ext={"py":"python","c":"c","cpp":"c++","cs":"c#","java":"java","sc":"scala","scala":"scala","pl":"perl"}
+        lang_ext={"py":"python","c":"c","cpp":"cpp","cs":"Csharp","java":"java","sc":"scala","scala":"scala","pl":"perl"}
         if(lang_ext.get(file_ext,0)):
            self.lang=lang_ext[file_ext]
            
