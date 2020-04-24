@@ -89,8 +89,9 @@ class CompileMe():
             print(output["output"])
             if(output.get("warning",0)):
                           print("WARNNING:\n"+output["warning"])
+            
         elif(output.get("cmpError",0)):
                     print("CompilerError:\n"+output["cmpError"])                     
-
-
+        elif(output.get("rntError",0)):
+            print("runtimeerror:\n"+output["rntError"])
 CompileMe()
