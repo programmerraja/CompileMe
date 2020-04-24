@@ -1,7 +1,7 @@
 
 """ A online multi compiler program """
 
-import requests as r
+from requests import Session
 from sys import argv
 
 class CompileMe():
@@ -68,7 +68,7 @@ class CompileMe():
             
     def compileit(self):
         """ compile the progam using geeksforgeeks api """
-        se=r.Session()
+        se=Session()
         data={"lang":self.lang  ,"code":self.code ,"input":self.input, "save":"false"}     
         try:
             outputid=se.post("https://ide.geeksforgeeks.org/main.php",data=data,headers=self.__header)
